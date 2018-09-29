@@ -49,7 +49,10 @@ namespace WBE_RemoveCharacter
                     myQ.Enqueue(x);
                 }
             }
-            for (int i = 0; i < myQ.Count; i++)
+
+            int count = myQ.Count;
+
+            for (int i = 0; i < count; i++)
             {
                 output += myQ.Dequeue();
             }
