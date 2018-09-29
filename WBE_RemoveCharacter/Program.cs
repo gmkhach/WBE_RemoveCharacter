@@ -39,9 +39,8 @@ namespace WBE_RemoveCharacter
         static string RemoveCharacter(string input, char ch)
         {
             string output = "";
-
+            // Creating a FIFO data structure;
             Queue myQ = new Queue();
-
             foreach (var x in input)
             {
                 if (x != ch)
@@ -49,10 +48,8 @@ namespace WBE_RemoveCharacter
                     myQ.Enqueue(x);
                 }
             }
-
-            int count = myQ.Count;
-
-            for (int i = 0; i < count; i++)
+            // Building the output from FIFO
+            while (myQ.Count !=0)
             {
                 output += myQ.Dequeue();
             }
