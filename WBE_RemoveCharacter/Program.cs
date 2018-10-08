@@ -25,14 +25,14 @@ namespace WBE_RemoveCharacter
                     Console.Write("Enter the character to be removed\n\n>>> ");
                     char ch = Convert.ToChar(Console.ReadLine());
                     Console.WriteLine(RemoveCharacter(input, ch));
+                    Console.Write("\nPress Enter to try another string...");
+                    Console.ReadLine();
+                    Console.Clear();
                 }
                 catch (Exception ex)
                 {
                     Console.WriteLine("\n" + ex.Message);
                 }
-                Console.Write("\nPress Enter to try another string...");
-                Console.ReadLine();
-                Console.Clear();
             } while (true);
         }
 
